@@ -13,6 +13,9 @@ get('/parcels') do
   width = params.fetch('width').to_i
   depth = params.fetch('depth').to_i
   weight = params.fetch('weight').to_i
+  distance = params.fetch('distance').to_i
+  @volume = @height * @width * @depth
   @parcels = Parcels.new(height, width, depth, weight)
+  @cost = @parcels.cost_to_ship(distance)
   erb(:parcels)
 end

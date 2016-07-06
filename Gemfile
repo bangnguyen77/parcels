@@ -2,5 +2,6 @@ source('https://rubygems.org')
 
 gem('sinatra')
 gem('sinatra-contrib')
-gem('descriptive_statistics')
-gem('ruby-measurement')
+gem('rspec')
+gem('capybara')
+gem('pry')
